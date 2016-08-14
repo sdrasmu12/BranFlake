@@ -1,0 +1,28 @@
+building_standard_mine_1 = { 
+	 base_buildtime = 120 
+	 cost = {
+		 minerals = 60
+	}
+	 required_resources = {
+		 energy = 0.5
+		 engineering_research = 0 
+	}
+	 produced_resources = {
+		 minerals = 2
+	}
+	 upgrades = {
+		 building_supercharged_mine_1 
+		 building_unsafe_mine_1 
+		 building_comfortable_mine_1 
+		 building_standard_mine_2 
+	}
+
+	prerequisites = {
+		tech_colonization_1
+		tech_power_plant_1	
+	}
+	
+	allow = {
+	has_technology = tech_power_plant_1
+	}
+}

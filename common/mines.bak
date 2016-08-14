@@ -1,0 +1,1256 @@
+##### MINES #####
+
+##Variables for Supercharged Mines
+#Build time
+@sm0time = 120
+@sm1time = 120
+@sm5time = 120
+@sm5time = 120
+@sm5time = 120
+@sm5time = 120
+@sm6time = 120
+@sm7time = 120
+@sm8time = 120
+@sm9time = 120
+@sm10time = 120
+
+#Cost
+@sm0cost = 60
+@sm1cost = 60
+@sm5cost = 60
+@sm5cost = 60
+@sm5cost = 60
+@sm5cost = 60
+@sm6cost = 60
+@sm7cost = 60
+@sm8cost = 60
+@sm9cost = 60
+@sm10cost = 60
+
+#Upkeep
+
+@sm0upkeep = 1
+@sm5upkeep = 1
+@sm5upkeep = 1
+@sm5upkeep = 1
+@sm5upkeep = 1
+@sm6upkeep = 1
+@sm7upkeep = 1
+@sm8upkeep = 1
+@sm9upkeep = 1
+@sm10upkeep = 1
+
+# Research Upkeep
+@sm0research = 1
+@sm2research = 1
+@sm3research = 1
+@sm4research = 1
+@sm5research = 1
+@sm6research = 1
+@sm7research = 1
+@sm8research = 1
+@sm9research = 1
+@sm10research = 1
+
+
+
+##Variables for Dangerous Mines
+
+#Build time
+@dm0time = 120
+@dm1time = 120
+@dm2time = 120
+@dm3time = 120
+@dm4time = 120
+@dm5time = 120
+@dm6time = 120
+@dm7time = 120
+@dm8time = 120
+@dm9time = 120
+@dm10time = 120
+
+#Cost
+@dm0cost = 60
+@dm1cost = 60
+@dm2cost = 60
+@dm3cost = 60
+@dm4cost = 60
+@dm5cost = 60
+@dm6cost = 60
+@dm7cost = 60
+@dm8cost = 60
+@dm9cost = 60
+@dm10cost = 60
+
+#Upkeep
+
+@dm0upkeep = 1
+@dm2upkeep = 1
+@dm3upkeep = 1
+@dm4upkeep = 1
+@dm5upkeep = 1
+@dm6upkeep = 1
+@dm7upkeep = 1
+@dm8upkeep = 1
+@dm9upkeep = 1
+@dm10upkeep = 1
+
+#Research Upkeep
+
+@dm0research = 1
+@dm2research = 1
+@dm3research = 1
+@dm4research = 1
+@dm5research = 1
+@dm6research = 1
+@dm7research = 1
+@dm8research = 1
+@dm9research = 1
+@dm10research = 1
+
+
+
+##Variables for Comfortable Mines
+
+#Build time
+@cm0time = 120
+@cm1time = 120
+@cm2time = 120
+@cm3time = 120
+@cm4time = 120
+@cm5time = 120
+@cm6time = 120
+@cm7time = 120
+@cm8time = 120
+@cm9time = 120
+@cm10time = 120
+
+#Cost
+@cm0cost = 60
+@cm1cost = 60
+@cm2cost = 60
+@cm3cost = 60
+@cm4cost = 60
+@cm5cost = 60
+@cm6cost = 60
+@cm7cost = 60
+@cm8cost = 60
+@cm9cost = 60
+@cm10cost = 60
+
+#Upkeep
+
+@cm0upkeep = 1
+@cm2upkeep = 1
+@cm3upkeep = 1
+@cm4upkeep = 1
+@cm5upkeep = 1
+@cm6upkeep = 1
+@cm7upkeep = 1
+@cm8upkeep = 1
+@cm9upkeep = 1
+@cm10upkeep = 1
+
+#Research Upkeep
+
+@cm0research = 1
+@cm2research = 1
+@cm3research = 1
+@cm4research = 1
+@cm5research = 1
+@cm6research = 1
+@cm7research = 1
+@cm8research = 1
+@cm9research = 1
+@cm10research = 1
+
+
+
+
+### Supercharged Mines #####
+# These mines require higher upkeep but produce more
+building_supercharged_mine_0 = {
+	base_buildtime = @sm0time
+	
+	cost = {
+		minerals = @sm0cost
+	}
+	
+	produced_resources = {
+		minerals = @sm0effect
+	}
+	
+	required_resources = {
+		energy = @sm0upkeep
+	}
+	
+	upgrades = {
+		building_supercharged_mine_1
+		building_dangerous_mine_0
+		building_comfortable_mine_0
+	}
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_1 = {
+	base_buildtime = @sm1time
+	
+	cost = {
+		minerals = @sm1cost
+	}
+	
+	produced_resources = {
+		minerals = @sm1effect
+	}
+	
+	required_resources = {
+		energy = @sm1upkeep
+		engineering_research = @sm1research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_2
+		building_dangerous_mine_1
+		building_comfortable_mine_1
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_2 = {
+	base_buildtime = @sm2time
+	
+	cost = {
+		minerals = @sm2cost
+	}
+	
+	produced_resources = {
+		minerals = @sm2effect
+	}
+	
+	required_resources = {
+		energy = @sm2upkeep
+		engineering_research = @sm2research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_3
+		building_dangerous_mine_2
+		building_comfortable_mine_2
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_3 = {
+	base_buildtime = @sm3time
+	
+	cost = {
+		minerals = @sm3cost
+	}
+	
+	produced_resources = {
+		minerals = @sm3effect
+	}
+	
+	required_resources = {
+		energy = @sm3upkeep
+		engineering_research = @sm3research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_4
+		building_dangerous_mine_3
+		building_comfortable_mine_3
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_4 = {
+	base_buildtime = @sm4time
+	
+	cost = {
+		minerals = @sm4cost
+	}
+	
+	produced_resources = {
+		minerals = @sm4effect
+	}
+	
+	required_resources = {
+		energy = @sm4upkeep
+		engineering_research = @sm4research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_5
+		building_dangerous_mine_4
+		building_comfortable_mine_4
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_5 = {
+	base_buildtime = @sm5time
+	
+	cost = {
+		minerals = @sm5cost
+	}
+	
+	produced_resources = {
+		minerals = @sm5effect
+	}
+	
+	required_resources = {
+		energy = @sm5upkeep
+		engineering_research = @sm5research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_6
+		building_dangerous_mine_5
+		building_comfortable_mine_5
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_6 = {
+	base_buildtime = @sm6time
+	
+	cost = {
+		minerals = @sm6cost
+	}
+	
+	produced_resources = {
+		minerals = @sm6effect
+	}
+	
+	required_resources = {
+		energy = @sm6upkeep
+		engineering_research = @sm6research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_7
+		building_dangerous_mine_6
+		building_comfortable_mine_6
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_7 = {
+	base_buildtime = @sm7time
+	
+	cost = {
+		minerals = @sm7cost
+	}
+	
+	produced_resources = {
+		minerals = @sm7effect
+	}
+	
+	required_resources = {
+		energy = @sm7upkeep
+		engineering_research = @sm7research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_7
+		building_dangerous_mine_6
+		building_comfortable_mine_6
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_8 = {
+	base_buildtime = @sm8time
+	
+	cost = {
+		minerals = @sm8cost
+	}
+	
+	produced_resources = {
+		minerals = @sm8effect
+	}
+	
+	required_resources = {
+		energy = @sm8upkeep
+		engineering_research = @sm8research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_9
+		building_dangerous_mine_8
+		building_comfortable_mine_8
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_9 = {
+	base_buildtime = @sm9time
+	
+	cost = {
+		minerals = @sm9cost
+	}
+	
+	produced_resources = {
+		minerals = @sm9effect
+	}
+	
+	required_resources = {
+		energy = @sm9upkeep
+		engineering_research = @sm9research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_10
+		building_dangerous_mine_9
+		building_comfortable_mine_9
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_supercharged_mine_10 = {
+	base_buildtime = @sm10time
+	
+	cost = {
+		minerals = @sm10cost
+	}
+	
+	produced_resources = {
+		minerals = @sm10effect
+	}
+	
+	required_resources = {
+		energy = @sm10upkeep
+		engineering_research = @sm10research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_10
+		building_comfortable_mine_10
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+#### Dangerous Mines
+# These mines cost little to produce but they make the workers inside them unhapppy
+
+building_dangerous_mine_0 = {
+	base_buildtime = @dm0time
+	
+	cost = {
+		minerals = @dm0cost
+	}
+	
+	produced_resources = {
+		minerals = @dm0effect
+	}
+	
+	required_resources = {
+		energy = @dm0upkeep
+	}
+	
+	upgrades = {
+		building_dangerous_mine_1
+		building_supercharged_mine_0
+		building_comfortable_mine_0
+	}
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_1 = {
+	base_buildtime = @dm1time
+	
+	cost = {
+		minerals = @dm1cost
+	}
+	
+	produced_resources = {
+		minerals = @dm1effect
+	}
+	
+	required_resources = {
+		energy = @dm1upkeep
+		engineering_research = @dm1research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_2
+		building_supercharged_mine_1
+		building_comfortable_mine_1
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_2 = {
+	base_buildtime = @dm2time
+	
+	cost = {
+		minerals = @dm2cost
+	}
+	
+	produced_resources = {
+		minerals = @dm2effect
+	}
+	
+	required_resources = {
+		energy = @dm2upkeep
+		engineering_research = @dm2research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_3
+		building_supercharged_mine_2
+		building_comfortable_mine_2
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_3 = {
+	base_buildtime = @dm3time
+	
+	cost = {
+		minerals = @dm3cost
+	}
+	
+	produced_resources = {
+		minerals = @dm3effect
+	}
+	
+	required_resources = {
+		energy = @dm3upkeep
+		engineering_research = @dm3research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_4
+		building_supercharged_mine_3
+		building_comfortable_mine_3
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_4 = {
+	base_buildtime = @dm4time
+	
+	cost = {
+		minerals = @dm4cost
+	}
+	
+	produced_resources = {
+		minerals = @dm4effect
+	}
+	
+	required_resources = {
+		energy = @dm4upkeep
+		engineering_research = @dm4research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_5
+		building_supercharged_mine_4
+		building_comfortable_mine_4
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_5 = {
+	base_buildtime = @dm5time
+	
+	cost = {
+		minerals = @dm5cost
+	}
+	
+	produced_resources = {
+		minerals = @dm5effect
+	}
+	
+	required_resources = {
+		energy = @dm5upkeep
+		engineering_research = @dm5research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_6
+		building_supercharged_mine_5
+		building_comfortable_mine_5
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_6 = {
+	base_buildtime = @dm6time
+	
+	cost = {
+		minerals = @dm6cost
+	}
+	
+	produced_resources = {
+		minerals = @dm6effect
+	}
+	
+	required_resources = {
+		energy = @dm6upkeep
+		engineering_research = @dm6research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_7
+		building_supercharged_mine_6
+		building_comfortable_mine_6
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_7 = {
+	base_buildtime = @dm7time
+	
+	cost = {
+		minerals = @dm7cost
+	}
+	
+	produced_resources = {
+		minerals = @dm7effect
+	}
+	
+	required_resources = {
+		energy = @dm7upkeep
+		engineering_research = @dm7research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_7
+		building_supercharged_mine_6
+		building_comfortable_mine_6
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_8 = {
+	base_buildtime = @dm8time
+	
+	cost = {
+		minerals = @dm8cost
+	}
+	
+	produced_resources = {
+		minerals = @dm8effect
+	}
+	
+	required_resources = {
+		energy = @dm8upkeep
+		engineering_research = @dm8research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_9
+		building_supercharged_mine_8
+		building_comfortable_mine_8
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_9 = {
+	base_buildtime = @dm9time
+	
+	cost = {
+		minerals = @dm9cost
+	}
+	
+	produced_resources = {
+		minerals = @dm9effect
+	}
+	
+	required_resources = {
+		energy = @dm9upkeep
+		engineering_research = @dm9research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_10
+		building_supercharged_mine_9
+		building_comfortable_mine_9
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_dangerous_mine_10 = {
+	base_buildtime = @dm10time
+	
+	cost = {
+		minerals = @dm10cost
+	}
+	
+	produced_resources = {
+		minerals = @dm10effect
+	}
+	
+	required_resources = {
+		energy = @dm10upkeep
+		engineering_research = @dm10research
+	}
+	
+	upgrades = {
+		building_supercharged_mine_10
+		building_comfortable_mine_10
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+
+#### Comfortable Mines
+# These mines are good places to work they require higher upkeep but keep workers happy
+building_comfortable_mine_0 = {
+	base_buildtime = @cm0time
+	
+	cost = {
+		minerals = @cm0cost
+	}
+	
+	produced_resources = {
+		minerals = @cm0effect
+	}
+	
+	required_resources = {
+		energy = @cm0upkeep
+	}
+	
+	upgrades = {
+		building_comfortable_mine_1
+		building_supercharged_mine_0
+		building_dangerous_mine_0
+	}
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_1 = {
+	base_buildtime = @cm1time
+	
+	cost = {
+		minerals = @cm1cost
+	}
+	
+	produced_resources = {
+		minerals = @cm1effect
+	}
+	
+	required_resources = {
+		energy = @cm1upkeep
+		engineering_research = @cm1research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_2
+		building_supercharged_mine_1
+		building_dangerous_mine_1
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_2 = {
+	base_buildtime = @cm2time
+	
+	cost = {
+		minerals = @cm2cost
+	}
+	
+	produced_resources = {
+		minerals = @cm2effect
+	}
+	
+	required_resources = {
+		energy = @cm2upkeep
+		engineering_research = @cm2research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_3
+		building_supercharged_mine_2
+		building_dangerous_mine_2
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_3 = {
+	base_buildtime = @cm3time
+	
+	cost = {
+		minerals = @cm3cost
+	}
+	
+	produced_resources = {
+		minerals = @cm3effect
+	}
+	
+	required_resources = {
+		energy = @cm3upkeep
+		engineering_research = @cm3research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_4
+		building_supercharged_mine_3
+		building_dangerous_mine_3
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_4 = {
+	base_buildtime = @cm4time
+	
+	cost = {
+		minerals = @cm4cost
+	}
+	
+	produced_resources = {
+		minerals = @cm4effect
+	}
+	
+	required_resources = {
+		energy = @cm4upkeep
+		engineering_research = @cm4research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_5
+		building_supercharged_mine_4
+		building_dangerous_mine_4
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_5 = {
+	base_buildtime = @cm5time
+	
+	cost = {
+		minerals = @cm5cost
+	}
+	
+	produced_resources = {
+		minerals = @cm5effect
+	}
+	
+	required_resources = {
+		energy = @cm5upkeep
+		engineering_research = @cm5research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_6
+		building_supercharged_mine_5
+		building_dangerous_mine_5
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_6 = {
+	base_buildtime = @cm6time
+	
+	cost = {
+		minerals = @cm6cost
+	}
+	
+	produced_resources = {
+		minerals = @cm6effect
+	}
+	
+	required_resources = {
+		energy = @cm6upkeep
+		engineering_research = @cm6research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_7
+		building_supercharged_mine_6
+		building_dangerous_mine_6
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_7 = {
+	base_buildtime = @cm7time
+	
+	cost = {
+		minerals = @cm7cost
+	}
+	
+	produced_resources = {
+		minerals = @cm7effect
+	}
+	
+	required_resources = {
+		energy = @cm7upkeep
+		engineering_research = @cm7research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_7
+		building_supercharged_mine_6
+		building_dangerous_mine_6
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_8 = {
+	base_buildtime = @cm8time
+	
+	cost = {
+		minerals = @cm8cost
+	}
+	
+	produced_resources = {
+		minerals = @cm8effect
+	}
+	
+	required_resources = {
+		energy = @cm8upkeep
+		engineering_research = @cm8research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_9
+		building_supercharged_mine_8
+		building_dangerous_mine_8
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_9 = {
+	base_buildtime = @cm9time
+	
+	cost = {
+		minerals = @cm9cost
+	}
+	
+	produced_resources = {
+		minerals = @cm9effect
+	}
+	
+	required_resources = {
+		energy = @cm9upkeep
+		engineering_research = @cm9research
+	}
+	
+	upgrades = {
+		building_comfortable_mine_10
+		building_supercharged_mine_9
+		building_dangerous_mine_9
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}
+
+building_comfortable_mine_10 = {
+	base_buildtime = @cm10time
+	
+	cost = {
+		minerals = @cm10cost
+	}
+	
+	produced_resources = {
+		minerals = @cm10effect
+	}
+	
+	required_resources = {
+		energy = @cm10upkeep
+		engineering_research = @cm10research
+	}
+	
+	upgrades = {
+		building_dangerous_mine_10
+		building_comfortable_mine_10
+	}
+	
+	
+	potential = {
+		custom_tooltip = {
+			text = "requires_shelter"
+			planet = {
+					has_building = "building_colony_shelter"
+			}
+		}
+	}
+}

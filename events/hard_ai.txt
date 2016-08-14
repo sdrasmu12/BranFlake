@@ -1,0 +1,120 @@
+########################
+# HardAI Events
+# id 000
+#########################
+
+# Mandate added
+country_event = {
+	id = corvinit.1
+	title = corvinit.1.title
+	desc = corvinit.1.desc
+	picture = GFX_evt_throne_room
+	show_sound = event_default
+
+	trigger = {
+		is_ai = yes
+		NOT = {
+			OR = {
+				has_country_flag = missile_corvette_1
+				has_country_flag = torpedo_corvette_1
+				has_country_flag = torpedo_corvette_1
+				has_country_flag = laser_corvette_1
+				has_country_flag = plasma_corvette_1
+				has_country_flag = disruptor_corvette_1
+				has_country_flag = mass_driver_corvette_1
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_country_flag = init_corvette
+	}
+}
+
+
+country_event = {
+	id = misscorv.1
+	title = corvinit.1.title
+	desc = corvinit.1.desc
+	picture = GFX_evt_throne_room
+	show_sound = event_default
+
+	trigger = {
+		is_ai = yes
+		#NOT IF HAVE ANY TECH 3 LVL HIGHER
+		NOT = {
+			OR = {
+				AND = {
+					NOT = { has_technology = tech_missiles_2 }
+					OR = {
+						has_technology = tech_energy_lance_1
+						has_technology = tech_plasma_1
+						has_technology = tech_disruptor_1
+						has_technology = tech_energy_torpedoes_1
+						has_technology = tech_lasers_3
+						has_technology = tech_torpedoes_1
+						has_technology = tech_mass_drivers_3
+						has_technology = tech_autocannons_1
+					}
+				}
+				AND = {
+					NOT = { has_technology = tech_missiles_3 }
+					OR = {
+						has_technology = tech_energy_lance_1
+						has_technology = tech_plasma_2
+						has_technology = tech_disruptor_2
+						has_technology = tech_energy_torpedoes_1
+						has_technology = tech_lasers_4
+						has_technology = tech_torpedoes_2
+						has_technology = tech_mass_drivers_4
+						has_technology = tech_autocannons_2
+					}
+				}
+				AND = {
+					NOT = { has_technology = tech_missiles_4 }
+					OR = {
+						has_technology = tech_energy_lance_2
+						has_technology = tech_plasma_3
+						has_technology = tech_disruptor_3
+						has_technology = tech_energy_torpedoes_2
+						has_technology = tech_lasers_5
+						has_technology = tech_torpedoes_3
+						has_technology = tech_mass_drivers_5
+						has_technology = tech_autocannons_3
+					}
+				}
+			}
+		}
+		has_country_flag = init_corvette
+		has_technology = tech_missiles_1
+	}
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.8
+			has_technology = tech_missiles_2	
+		}
+		modifier = {
+			factor = 0.6
+			has_technology = tech_missiles_3	
+		}
+		modifier = {
+			factor = 0.4
+			has_technology = tech_missiles_4	
+		}
+		modifier = {
+			factor = 0.2
+			has_technology = tech_missiles_5	
+		}
+	}
+	
+	immediate = {
+		set_country_flag = missile_corvette_1
+		set_country_flag = armored_corvettes
+	}
+}
